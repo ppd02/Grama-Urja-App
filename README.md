@@ -1,141 +1,313 @@
-# Grama-Urja
+<h1 align="center">Grama Urja App</h1>
 
-Grama-Urja is an Android app for community-powered rural electricity status monitoring in Karnataka. It helps farmers follow local village or transformer zones, report power ON/OFF status, receive recent power alerts, calculate irrigation pump timing, and get fixed crop-wise watering guidance without requiring a user account.
+<h3 align="center">
+Crowdsourced Rural Power Monitoring & Smart Irrigation Assistant
+</h3>
 
-The app is built as a Kotlin MVP with Jetpack Compose, Material 3, MVVM, Hilt, Firebase Realtime Database, Firebase Cloud Messaging, DataStore preferences, and offline irrigation recommendations.
+<p align="center">
+An Android application that helps rural farmers monitor real-time electricity availability and improve irrigation planning using Firebase and Generative AI.
+</p>
 
-## App Preview
+<p align="center">
+<img src="screenshots/banner.png" width="100%"/>
+</p>
 
-| Splash | Home | Alerts |
-| --- | --- | --- |
-| <img src="docs/screenshots/splash.jpeg" width="220" alt="Grama-Urja splash screen" /> | <img src="docs/screenshots/home.jpeg" width="220" alt="Grama-Urja home dashboard" /> | <img src="docs/screenshots/alerts.jpeg" width="220" alt="Power alerts screen" /> |
+<hr>
 
-## Farmer Flow
+<h2>📌 Overview</h2>
 
-| Setup | Pump Timer | Crop Tips |
-| --- | --- | --- |
-| <img src="docs/screenshots/setup.jpeg" width="220" alt="Zone setup screen" /> | <img src="docs/screenshots/pump-timer.jpeg" width="220" alt="Pump timer screen" /> | <img src="docs/screenshots/crop-tips.jpeg" width="220" alt="Crop tips screen" /> |
+<p>
+Grama-Urja is a smart rural Android application designed to help farmers know whether electricity is available in their transformer zone without physically visiting their fields.
+</p>
 
-| Profile |
-| --- |
-| <img src="docs/screenshots/profile.jpeg" width="220" alt="Profile screen" /> |
+<p>
+Farmers can collaboratively update power status as <b>ON</b> or <b>OFF</b>, and all users in the same zone receive live updates instantly. The app also includes irrigation assistance, push notifications, and an AI-powered farming assistant.
+</p>
 
-## Highlights
+<hr>
 
-- No login required for farmer identity and local reports.
-- Select and follow Karnataka village or transformer zones.
-- Report power ON/OFF status from the current phone.
-- Live Firebase Realtime Database status syncing.
-- Firebase Cloud Messaging service for zone power updates.
-- Recent alerts list for followed zones.
-- Pump timer calculator for common Karnataka crops.
-- Fixed irrigation guidance for Paddy, Sugarcane, Vegetables, Groundnut, Ragi, Arecanut, Maize, and Cotton.
-- Kannada + English UI support.
-- DataStore-backed preferences for language, profile name, and followed zones.
+<h2>🎯 Problem Statement</h2>
 
-## Tech Stack
+<ul>
+<li>Rural electricity supply is irregular and unpredictable.</li>
+<li>Farmers travel long distances to check if power has returned.</li>
+<li>This causes time loss, physical effort, and delayed irrigation.</li>
+<li>Water and energy resources are often used inefficiently.</li>
+<li>There is no simple community-driven real-time monitoring solution.</li>
+</ul>
 
-- Kotlin
-- Android Gradle Plugin 9.0.1
-- Jetpack Compose with Material 3
-- AndroidX Navigation Compose
-- Hilt dependency injection
-- Firebase Realtime Database
-- Firebase Cloud Messaging
-- Kotlin coroutines and Flow
-- DataStore preferences
+<hr>
 
-## Project Structure
+<h2>🚀 Features</h2>
 
-```text
-app/src/main/java/com/gramaurja2/app
-  GramaUrjaApplication.kt           Hilt application class
-  MainActivity.kt                   Compose entry point
-  data/
-    local/                          DataStore preferences and local power/tips helpers
-    remote/firebase/                Firebase status, profile, messaging, and notification repositories
-  di/
-    AppModule.kt                    Hilt dependency bindings
-  domain/model/                     Zone, profile, status, crop, language, and notification models
-  navigation/
-    GramaUrjaNavGraph.kt            Compose navigation graph
-    Route.kt                        Screen route definitions
-  presentation/viewmodel/           Screen state and app actions
-  ui/
-    components/                     Shared Grama-Urja UI components and localization helpers
-    screens/                        Splash, onboarding, dashboard, alerts, timer, tips, settings, profile
-    theme/                          Compose theme, color, and typography setup
-```
+<ul>
+<li>⚡ Real-time Power Status Monitoring</li>
+<li>📡 Firebase Realtime Synchronization</li>
+<li>🔔 Push Notifications using Firebase Cloud Messaging</li>
+<li>👨‍🌾 Transformer Zone-based Updates</li>
+<li>📊 Community Reports Dashboard</li>
+<li>💧 Irrigation Pump Timer Calculator</li>
+<li>🤖 AI Farming Assistant using Gemini/OpenAI</li>
+<li>🕒 Timestamp Freshness Tracking</li>
+<li>📱 High Contrast Rural-Friendly UI</li>
+</ul>
 
-## Core Screens
+<hr>
 
-1. Splash
-2. Setup / zone selection
-3. Home dashboard
-4. Power report
-5. Power alerts
-6. Pump timer
-7. Crop tips
-8. Profile
+<h2>🛠 Tech Stack</h2>
 
-## Firebase
+<table>
+<tr>
+<th>Technology</th>
+<th>Purpose</th>
+</tr>
 
-Create your own Firebase Android app and place the downloaded file at `app/google-services.json`. The file is ignored by Git so private project configuration is not published.
+<tr>
+<td>Kotlin</td>
+<td>Android Application Development</td>
+</tr>
 
-Enable Realtime Database and Cloud Messaging in Firebase Console.
+<tr>
+<td>XML</td>
+<td>User Interface Design</td>
+</tr>
 
-Realtime Database structure:
+<tr>
+<td>Firebase Realtime Database</td>
+<td>Real-time Data Synchronization</td>
+</tr>
 
-```text
-zones/{zoneId}/currentStatus
-users/{userId}
-notifications/{zoneId}/{notificationId}
-deviceTokens/{tokenHash}
-```
+<tr>
+<td>Firebase Authentication</td>
+<td>User Login & Registration</td>
+</tr>
 
-## Getting Started
+<tr>
+<td>Firebase Cloud Messaging</td>
+<td>Push Notifications</td>
+</tr>
 
-### Prerequisites
+<tr>
+<td>Retrofit</td>
+<td>REST API Integration</td>
+</tr>
 
-- Android Studio
-- JDK 17
-- Android SDK with compile SDK 36
-- An emulator or Android device running Android 8.0 or newer
-- Firebase project configured with Realtime Database and Cloud Messaging
+<tr>
+<td>Gemini/OpenAI API</td>
+<td>Generative AI Assistant</td>
+</tr>
 
-### Run The App
+<tr>
+<td>MVVM Architecture</td>
+<td>Clean & Scalable Code Structure</td>
+</tr>
 
-1. Open this folder in Android Studio.
-2. Let Gradle sync finish.
-3. Add your Firebase `google-services.json` file inside `app/`.
-4. Select an emulator or physical device.
-5. Run the `app` configuration.
+</table>
 
-### Command Line Build
+<hr>
 
-```powershell
-$env:JAVA_HOME='C:\Program Files\Android\Android Studio\jbr'
-$env:Path="$env:JAVA_HOME\bin;$env:Path"
-.\gradlew.bat :app:assembleDebug
-```
+<h2>📸 Application Screenshots</h2>
 
-## Typical Workflow
+<table>
+<tr>
+<td align="center">
+<h4>🔐 Login Screen</h4>
+<img src="screenshots/login_screen.png" width="250"/>
+</td>
 
-1. Choose the preferred language.
-2. Select a primary village or transformer zone.
-3. Open the home dashboard to view current power status.
-4. Report power ON or OFF for the selected zone.
-5. Review alerts from followed zones.
-6. Use the pump timer to estimate irrigation duration.
-7. Open crop tips for fixed local guidance.
+<td align="center">
+<h4>⚡ Dashboard</h4>
+<img src="screenshots/dashboard_screen.png" width="250"/>
+</td>
+</tr>
 
-## Data And Privacy
+<tr>
+<td align="center">
+<h4>📊 Reports Screen</h4>
+<img src="screenshots/reports_screen.png" width="250"/>
+</td>
 
-- Farmer identity is stored as a simple local display name.
-- Followed zones and language preferences are stored locally with DataStore.
-- Power reports sync to Firebase for community visibility.
-- `local.properties` and `app/google-services.json` are ignored by Git and should not be committed.
+<td align="center">
+<h4>💧 Pump Timer</h4>
+<img src="screenshots/pump_timer_screen.png" width="250"/>
+</td>
+</tr>
 
-## Current Status
+<tr>
+<td align="center">
+<h4>🤖 AI Assistant</h4>
+<img src="screenshots/assistant_screen.png" width="250"/>
+</td>
 
-Grama-Urja is an MVP focused on rural power status sharing, simple alerts, irrigation timing, and crop guidance for Karnataka farmers. Good next steps would be richer zone search, admin moderation, and production-ready Firebase security rules.
+<td align="center">
+<h4>🔔 Notifications</h4>
+<img src="screenshots/notification_screen.png" width="250"/>
+</td>
+</tr>
+</table>
+
+<hr>
+
+<h2>📱 Application Screens</h2>
+
+<ol>
+<li>Live Power Dashboard</li>
+<li>Community Reports Screen</li>
+<li>Pump Timer Calculator</li>
+<li>AI Assistant Screen</li>
+<li>Notifications & Alerts Screen</li>
+</ol>
+
+<hr>
+
+<h2>🧠 System Workflow</h2>
+
+<pre>
+Farmer Updates Power Status
+            ↓
+Firebase Realtime Database
+            ↓
+Live Sync to Same Transformer Zone
+            ↓
+Push Notification Trigger
+            ↓
+Farmers Receive Instant Alert
+            ↓
+Irrigation Planning & Pump Usage
+</pre>
+
+<hr>
+
+<h2>🔥 Firebase Database Structure</h2>
+
+<pre>
+users
+   uid_001
+      name: Ramesh
+      village: Angondhalli
+      zone: T1
+
+zones
+   T1
+      powerStatus: ON
+      updatedBy: Ramesh
+      timestamp: 17145345345
+
+reports
+   T1
+      report1
+         user: Ramesh
+         status: ON
+         timestamp: 17145345345
+</pre>
+
+<hr>
+
+<h2>⚙️ Firebase Setup</h2>
+
+<h3>Step 1</h3>
+<p>Create a Firebase project.</p>
+
+<h3>Step 2</h3>
+
+<pre>
+Package Name:
+com.gramaurja.app
+</pre>
+
+<p>Download:</p>
+
+<pre>
+google-services.json
+</pre>
+
+<p>Place inside:</p>
+
+<pre>
+app/google-services.json
+</pre>
+
+<h3>Step 3</h3>
+
+<p>Enable the following Firebase services:</p>
+
+<ul>
+<li>Firebase Authentication</li>
+<li>Firebase Realtime Database</li>
+<li>Firebase Cloud Messaging</li>
+</ul>
+
+<hr>
+
+<h2>📦 Dependencies</h2>
+
+<pre>
+implementation 'com.google.firebase:firebase-auth-ktx'
+implementation 'com.google.firebase:firebase-database-ktx'
+implementation 'com.google.firebase:firebase-messaging-ktx'
+implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+</pre>
+
+<hr>
+
+<h2>📂 Recommended Project Structure</h2>
+
+<pre>
+Grama-Urja/
+│
+├── screenshots/
+│   ├── banner.png
+│   ├── login_screen.png
+│   ├── dashboard_screen.png
+│   ├── reports_screen.png
+│   ├── pump_timer_screen.png
+│   ├── assistant_screen.png
+│   └── notification_screen.png
+│
+├── app/
+├── README.md
+</pre>
+
+<hr>
+
+<h2>🌱 Future Enhancements</h2>
+
+<ul>
+<li>AI-based Power Availability Prediction</li>
+<li>Voice Assistant in Regional Languages</li>
+<li>GPS Verified Status Reports</li>
+<li>Weather-integrated Irrigation Suggestions</li>
+<li>Offline Synchronization Support</li>
+<li>Transformer Analytics Dashboard</li>
+<li>Community Discussion Forum</li>
+</ul>
+
+<hr>
+
+<h2>🌍 Real World Impact</h2>
+
+<ul>
+<li>⏳ Saves farmers’ time and effort</li>
+<li>💧 Improves irrigation efficiency</li>
+<li>⚡ Encourages smarter energy usage</li>
+<li>🌱 Supports sustainable agriculture</li>
+<li>🤝 Promotes community-driven rural intelligence</li>
+<li>📲 Provides low-cost digital infrastructure support</li>
+</ul>
+
+<hr>
+
+<h2>👨‍💻 Developed Using</h2>
+
+<p>
+Android Studio • Kotlin • Firebase • Generative AI
+</p>
+
+<hr>
+
+<h2>📜 License</h2>
+
+<p>
+This project is developed for educational, innovation, and rural development purposes.
+</p>
