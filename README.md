@@ -9,7 +9,7 @@ An Android application that helps rural farmers monitor real-time electricity av
 </p>
 
 <p align="center">
-<img src="screenshots/banner.png" width="100%"/>
+<!-- <img src="https://github.com/user-attachments/assets/74907430-c3b3-425e-bc57-f9389bd5dc5a" width="100%"/> -->
 </p>
 
 <hr>
@@ -111,37 +111,35 @@ Farmers can collaboratively update power status as <b>ON</b> or <b>OFF</b>, and 
 <table>
 <tr>
 <td align="center">
-<h4>🔐 Login Screen</h4>
-<img src="screenshots/login_screen.png" width="250"/>
+<h4>Profile</h4>
+<img src="https://github.com/user-attachments/assets/46d47f8d-f859-4a6a-a791-ad1cfb695447" width="250"/>
 </td>
 
 <td align="center">
-<h4>⚡ Dashboard</h4>
-<img src="screenshots/dashboard_screen.png" width="250"/>
-</td>
-</tr>
-
-<tr>
-<td align="center">
-<h4>📊 Reports Screen</h4>
-<img src="screenshots/reports_screen.png" width="250"/>
+<h4>Dashboard</h4>
+<img src="https://github.com/user-attachments/assets/bdf9681f-8a99-4daf-862e-09b4edf56f50" width="250"/>
 </td>
 
 <td align="center">
-<h4>💧 Pump Timer</h4>
-<img src="screenshots/pump_timer_screen.png" width="250"/>
+<h4>Notifications</h4>
+<img src="https://github.com/user-attachments/assets/0f66db1f-9b10-447c-90f3-9875fde235cb" width="250"/>
 </td>
 </tr>
 
 <tr>
 <td align="center">
-<h4>🤖 AI Assistant</h4>
-<img src="screenshots/assistant_screen.png" width="250"/>
+<h4>Pump Timer</h4>
+<img src="https://github.com/user-attachments/assets/b8005609-2649-483f-a1f9-9dd53aa3ca84" width="250"/>
 </td>
 
 <td align="center">
-<h4>🔔 Notifications</h4>
-<img src="screenshots/notification_screen.png" width="250"/>
+<h4>AI Assistant & Market Values</h4>
+<img src="https://github.com/user-attachments/assets/360f5eb6-8d08-41c9-9f90-da4c403e8665" width="250"/>
+</td>
+
+<td align="center">
+<h4>Settings</h4>
+<img src="https://github.com/user-attachments/assets/17a55624-2060-4cce-8744-00b24916a79f" width="250"/>
 </td>
 </tr>
 </table>
